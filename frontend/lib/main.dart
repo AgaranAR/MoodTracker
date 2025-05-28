@@ -6,7 +6,7 @@ void main() {
 }
 
 class MoodTrackerApp extends StatelessWidget {
-  const MoodTrackerApp({Key? key}) : super(key: key);
+  const MoodTrackerApp({super.key});
 
   @override
   Widget build(BuildContext context) {

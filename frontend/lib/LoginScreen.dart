@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget{
-  const LoginScreen({Key?key}) : super(key:key);
+  const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -21,8 +21,8 @@ class _LoginScreenState extends State<LoginScreen>{
     final email = _email_cont.text.trim();
     final password = _pass_cont.text;
 
-    print('$email');
-    print('$password');
+    print(email);
+    print(password);
   }
 
   @override
@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen>{
           TextField(controller: _email_cont,decoration: const InputDecoration(labelText: 'Email',border: OutlineInputBorder(),),
           keyboardType: TextInputType.emailAddress),
           const SizedBox(height: 16),
-          TextField(controller: _pass_cont,decoration: InputDecoration(labelText: 'Password',border: OutlineInputBorder())
+          TextField(controller: _pass_cont,decoration: const InputDecoration(labelText: 'Password',border: OutlineInputBorder())
             ,obscureText: true),
           const SizedBox(height: 24),
           ElevatedButton(onPressed: login, child: const Text('Login')
